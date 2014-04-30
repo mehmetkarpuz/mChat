@@ -145,7 +145,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -251,25 +250,11 @@
     <Content Include="Content\themes\Lib\css\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\themes\Lib\css\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\themes\Lib\css\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\Controller\ConversationCtrl.js" />
     <Content Include="Scripts\Controller\GlobalScope.js" />
     <Content Include="Scripts\Controller\Helper.js" />
     <Content Include="Scripts\Controller\LoginCtrl.js" />
     <Content Include="Scripts\Controller\MainCtrl.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js" />
-    <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js" />
     <Content Include="Scripts\Lib\bootstrap\js\bootstrap-popover.js" />
     <Content Include="Scripts\Lib\bootstrap\js\bootstrap-tooltip.js" />
@@ -297,7 +282,6 @@
     <Content Include="Scripts\Lib\Spin\spin.js" />
     <Content Include="Scripts\Lib\Toastr\css\toastr.min.css" />
     <Content Include="Scripts\Lib\Toastr\js\toastr.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -320,7 +304,6 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
