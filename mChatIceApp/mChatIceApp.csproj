@@ -174,6 +174,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\Index.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -228,6 +230,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\Lib\css\bootstrap.min.css" />
+    <Content Include="Content\themes\Lib\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\themes\Lib\css\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\themes\Lib\css\img\glyphicons-halflings.png" />
+    <Content Include="Content\themes\Lib\css\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -241,7 +248,15 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Content\themes\Lib\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\themes\Lib\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\themes\Lib\css\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\Controller\ConversationCtrl.js" />
+    <Content Include="Scripts\Controller\GlobalScope.js" />
+    <Content Include="Scripts\Controller\Helper.js" />
+    <Content Include="Scripts\Controller\LoginCtrl.js" />
+    <Content Include="Scripts\Controller\MainCtrl.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -255,6 +270,33 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\Lib\Angular\angular.min.js" />
+    <Content Include="Scripts\Lib\bootstrap\js\bootstrap-popover.js" />
+    <Content Include="Scripts\Lib\bootstrap\js\bootstrap-tooltip.js" />
+    <Content Include="Scripts\Lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\themes\Lib\css\images\animated-overlay.gif" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\themes\Lib\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\Lib\css\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Scripts\Lib\Jquery\js\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\Lib\Jquery\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Scripts\Lib\Jquery\js\jquery.dialogextend.min.js" />
+    <Content Include="Scripts\Lib\Moment\moment.min.js" />
+    <Content Include="Scripts\Lib\Spin\spin.js" />
+    <Content Include="Scripts\Lib\Toastr\css\toastr.min.css" />
+    <Content Include="Scripts\Lib\Toastr\js\toastr.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -284,6 +326,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Content\themes\Lib\css\images\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
