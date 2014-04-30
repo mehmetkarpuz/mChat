@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html ng-app="MainChatApp">
+<head>
+    <title>Chat Main</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!--LIB SCRIPTS-->
+    <script src="../Lib/Jquery/js/jquery-1.10.2.min.js"></script>
+    <script src="../Lib/Angular/angular.min.js"></script>
+    <script src="../Lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Lib/Toastr/js/toastr.min.js"></script>
+    <script src="../Lib/Moment/moment.min.js"></script>
+    <script src="../Lib/Jquery/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="../Lib/Jquery/js/jquery.dialogextend.min.js"></script>
+
+    <!--CUSTOM SCRIPTS-->
+    <script src="../Controller/Helper.js"></script>
+    <script src="../Controller/MainCtrl.js"></script>
+
+    <!--LIB CSS-->
+    <link href="../Lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Lib/Jquery/css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+    <link href="../Lib/Toastr/css/toastr.min.css" rel="stylesheet" />
+
+    <!--CUSTOM CSS-->
+    <link href="../Index.css" rel="stylesheet" />
+
+</head>
+<body ng-controller="MainChatPanelCtrl" ng-init="Initialize()">
+    <div class="container" style="width: 100%; margin-top: 10px;">
+        <div class="col-md-3">
+            <ul class="chat">
+                <li ng-repeat="connecteduser in ConnectedUsers" class="clearfix">
+                    <span class="glyphicon glyphicon-user"></span>
+                    {{connecteduser.UserName}}
+                    <input type="button" class="btn btn-primary btn-sm pull-right"
+                        ng-click="OpenConversationWin(connecteduser.UserName)" value="Sohbet Başlat" />
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span>Giriş Chat Paneli(Buradaki yazışmaları online olan herkse görebilir.)
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+                            <li><a href="#"><span class="glyphicon glyphicon-refresh"></span>Yenile</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-ok-sign"></span>Uygun</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-remove"></span>Meşgul</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-time"></span>
+                                Dışarda</a></li>
+                            <li class="divider"></li>
+                            <li><a href="Login.html"><span class="glyphicon glyphicon-off"></span>
+                                Çıkış</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="chatpnl" class="panel-body">
+                    <ul class="chat">
+                        <li ng-repeat="chatmsg in chatMsgs" class="{{chatmsg.ChatLiClass}}">
+                            <span class="{{chatmsg.ChatLiSpanClass}}">
+                                <img src="{{chatmsg.UserLogo}}" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">{{chatmsg.UserName}}</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>{{chatmsg.MsgDate}}</small>
+                                </div>
+                                <p>
+                                    {{chatmsg.Message}}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <textarea id="txtNewMessage" type="text" ng-model="NewUserMessage" ng-enter="SendMessage()" class="form-control input-sm" placeholder="Mesajınızı giriniz...">
+                         </textarea>
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-group-lg" ng-click="SendMessage()" id="btn-chat">
+                                Gönder</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ConversationModal" title="User Chat Panel">
+    </div>
+</body>
+</html>

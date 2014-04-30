@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="LoginApp">
+<head>
+    <title>Chat-Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!--LIB CSS-->
+    <link href="../Lib/Toastr/css/toastr.min.css" rel="stylesheet" />
+    <link href="../Lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--CUSTOM CSS-->
+    <link href="../Login.css" rel="stylesheet" />
+
+    <!--LIB SCRIPTS-->
+    <script src="../Lib/Jquery/js/jquery-1.10.2.min.js"></script>
+    <script src="../Lib/Angular/angular.min.js"></script>
+    <script src="../Lib/Toastr/js/toastr.min.js"></script>
+    <script src="../Lib/Spin/spin.js"></script>
+
+    <!--CUSTOM SCRIPTS-->
+    <script src="../Controller/GlobalScope.js"></script>
+    <script src="../Controller/LoginCtrl.js"></script>
+
+</head>
+<body ng-controller="LoginCtrl">
+    <div class="container">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Kullanıcı Girişi</h2>
+            <input type="text" class="form-control" ng-model="User.UserName" placeholder="Kullanıcı Adı" autofocus="autofocus" />
+            <input type="password" class="form-control" ng-model="User.Password" placeholder="Şifre" />
+            <button id="btnLogin" class="btn btn-lg btn-primary btn-block"
+                ng-click="AuthenticateUser()" ng-disabled="isDisabled" type="button">
+                Giriş</button>
+            <div id="loadingdiv"></div>
+        </form>
+    </div>
+</body>
+</html>
