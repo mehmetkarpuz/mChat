@@ -6,7 +6,7 @@ var appLogin = angular.module('LoginApp', []);
 appLogin.factory('userFactory', function ($http) {
     return {
         AuthUser: function (user) {
-            return $http.post(GLOBALS.serviceUrl + "AuthenticateUser", "{ user : " + JSON.stringify(user) + "}");
+            return $http.post("http://" + GLOBALS.serviceUrl + "mLogin/AuthenticateUser", "{ UserModel : " + JSON.stringify(user) + "}");
         }
     };
 });

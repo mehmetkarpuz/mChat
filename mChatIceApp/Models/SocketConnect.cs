@@ -1,4 +1,5 @@
-﻿using Microsoft.Web.WebSockets;
+﻿using mChatIceApp.Models;
+using Microsoft.Web.WebSockets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace mChatIceApp
     public class ChatSocketHandler : WebSocketHandler
     {
         private static WebSocketCollection clients = new WebSocketCollection();
-        private ConnectedUser connectedUser = new ConnectedUser();
+        private UserModel connectedUser = new UserModel();
 
         public ChatSocketHandler(string username)
         {
@@ -58,10 +59,10 @@ namespace mChatIceApp
             string connectedUserListJsonStr = "";
             try
             {
-                List<ConnectedUser> connectedUserList = new List<ConnectedUser>();
+                List<UserModel> connectedUserList = new List<UserModel>();
                 foreach (var item in clientcollection)
                 {
-                    ConnectedUser newUser = new ConnectedUser();
+                    UserModel newUser = new UserModel();
                     newUser.UserName = item.WebSocketContext.QueryString["UserName"].ToString();
                     newUser.UserLogo = "1";
                     connectedUserList.Add(newUser);
@@ -76,10 +77,5 @@ namespace mChatIceApp
         }
     }
 
-    public class ConnectedUser
-    {
-        public string UserName { get; set; }
-        public string UserLogo { get; set; }
-        public string UserId { get; set; }
-    }
+   
 }

@@ -1,7 +1,7 @@
 ﻿
 (function () {
     var GLOBALS = {
-        serviceUrl: 'http://mehmetkarpuz/mChatApp/ChatSrv.asmx/',
+        serviceUrl: 'mehmetkarpuz/mChatIceApp/api/',
     }
 
     if (!window.GLOBALS) { window.GLOBALS = GLOBALS; }

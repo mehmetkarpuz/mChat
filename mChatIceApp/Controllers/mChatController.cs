@@ -14,6 +14,8 @@ namespace mChatIceApp.Controllers
         [AcceptVerbs("GET", "POST")]
         public HttpResponseMessage ConnectUser(string username)
         {
+            if (!HttpContext.Current.IsWebSocketRequest)
+                return new HttpResponseMessage(HttpStatusCode.MethodNotAllowed);
             HttpContext.Current.AcceptWebSocketRequest(new ChatSocketHandler(username));
             return Request.CreateResponse(HttpStatusCode.SwitchingProtocols);
         }

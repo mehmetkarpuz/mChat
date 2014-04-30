@@ -67,7 +67,7 @@ appMainChat.controller('MainChatPanelCtrl', function ($scope) {
     var queryStrngs = getQueryStrings();
     var urlUserName = queryStrngs["UserName"];
     //var url = "ws://" + "192.168.2.4/mChatApp/SocketMsgHandler.ashx?UserName=" + urlUserName;
-    var url = "ws://" + "mehmetkarpuz/mChatIceApp/api/mChat/ConnectUser?username=" + urlUserName;
+    var url = "ws://" + GLOBALS.serviceUrl + "/mChat/ConnectUser?username=" + urlUserName;
     //var url = "ws://" + "84.51.18.91/mChatApp/SocketMsgHandler.ashx?UserName=" + urlUserName;
     var socket = new WebSocket(url);
 
