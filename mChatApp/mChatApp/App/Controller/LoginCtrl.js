@@ -7,6 +7,7 @@ appLogin.factory('userFactory', function ($http) {
     return {
         AuthUser: function (user) {
             return $http.post("http://" + GLOBALS.serviceUrl + "mLogin/AuthenticateUser", "{ UserModel : " + JSON.stringify(user) + "}");
+            //return $http.post("http://" + GLOBALS.serviceUrl + "mLogin/TestSrv", JSON.stringify("param1:1"), JSON.stringify("param2:2"));
         }
     };
 });

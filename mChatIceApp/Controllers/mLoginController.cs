@@ -10,12 +10,18 @@ namespace mChatIceApp.Controllers
 {
     public class mLoginController : ApiController
     {
-       [AcceptVerbs("GET", "POST")]
+        [AcceptVerbs("GET", "POST")]
         public UserModel AuthenticateUser(UserModel user)
         {
             if (user == null)
                 return new UserModel();
             return new UserModel() { UserName = user.UserName, Password = "1234" };
+        }
+
+        [AcceptVerbs("GET", "POST")]
+        public HttpResponseMessage TestSrv(int id)
+        {
+            return new HttpResponseMessage();
         }
     }
 }
