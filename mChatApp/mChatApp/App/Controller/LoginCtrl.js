@@ -100,7 +100,8 @@ appLogin.controller('LoginCtrl', function ($scope, userFactory, notificationFact
     //Bu sorunu aşmak için burada model tanımlamak zorunda mıyım? ARAŞTIR!!!!!!!!!!!!
     $scope.User = {
         UserName: "",
-        Password: ""
+        Password: "",
+        Type:1
     }
     $scope.isDisabled = false;
     $scope.AuthenticateUser = function (event) {
